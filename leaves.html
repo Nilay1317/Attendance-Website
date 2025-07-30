@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Management</title>
+    <link rel="stylesheet" href="leaves.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Rapid AI</h2>
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">Employees</a></li>
+            <li><a href="#">Attendance</a></li>
+            <li><a href="#" class="active">Leaves</a></li>
+            <li><a href="#">Payrolls</a></li>
+            <li><a href="#">Holidays</a></li>
+            <li><a href="#">Daily</a></li>
+            <li><a href="#">Performances</a></li>
+            <li><a href="#">Productions</a></li>
+        </ul>
+    </div>
+    <div class="main-content">
+        <header>
+            <h1>Leave Management</h1>
+        </header>
+        <section class="leave-form">
+            <h2>Apply for Leave</h2>
+            <form id="leaveForm">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate" name="startDate" required>
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate" name="endDate" required>
+                <label for="reason">Reason:</label>
+                <input type="text" id="reason" name="reason" required>
+                <button type="submit">Submit</button>
+            </form>
+            <p id="balanceStatus"></p>
+        </section>
+        <section class="leave-table">
+            <h2>Leave Requests</h2>
+            <label for="statusFilter">Filter by Status:</label>
+            <select id="statusFilter">
+                <option value="All">All</option>
+                <option value="Pending">Pending</option>
+                <option value="Approved">Approved</option>
+                <option value="Rejected">Rejected</option>
+            </select>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Employee ID</th>
+                        <th>Name</th>
+                        <th>Start Date</th>
+                        <th>End Date</th>
+                        <th>Reason</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="leaveTableBody">
+                    <!-- Leave entries will be populated here -->
+                </tbody>
+            </table>
+        </section>
+    </div>
+    <script src="leaves.js"></script>
+</body>
+</html>
