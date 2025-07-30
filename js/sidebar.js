@@ -27,10 +27,12 @@ function initializeSidebar() {
                 <i data-lucide="clock" class="icon"></i>
                 <span>Attendance</span>
             </div>
-            <div class="menu-item">
-                <i data-lucide="calendar" class="icon"></i>
-                <span>Leaves</span>
-            </div>
+          
+        <div class="menu-item">
+            <i data-lucide="calendar" class="icon"></i>
+            <a href="leaves.html"><span>Leaves</span></a>
+        </div>
+
             <div class="menu-item">
                 <i data-lucide="dollar-sign" class="icon"></i>
                 <span>Payrolls</span>
